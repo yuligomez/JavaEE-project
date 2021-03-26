@@ -1,0 +1,13 @@
+servicio\PersonaService.class
+servicio\UsuarioServiceImpl.class
+datos\PersonaDao.class
+datos\PersonaDaoImpl.class
+datos\UsuarioDaoImpl.class
+web\PersonaServlet.class
+servicio\PersonaServiceImpl.class
+domain\Persona.class
+servicio\UsuarioService.class
+servicio\UsuarioServiceRemote.class
+domain\Usuario.class
+web\UsuarioServlet.class
+datos\UsuarioDao.class
