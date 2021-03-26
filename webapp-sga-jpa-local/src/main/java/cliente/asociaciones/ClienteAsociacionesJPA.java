@@ -1,30 +1,24 @@
-/*
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
- */
 package cliente.asociaciones;
 
-import javax.persistence.EntityManager;
-import javax.persistence.EntityManagerFactory;
-import javax.persistence.Persistence;
+import java.util.List;
+import javax.persistence.*;
+import domain.Persona;
+import domain.Usuario;
+import org.apache.logging.log4j.*;
 
-/**
- *
- * @author yulia
- */
 public class ClienteAsociacionesJPA {
+    static Logger log = LogManager.getRootLogger();
     
     public static void main(String[] args) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("SgaPU");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("UsuarioPu");
         EntityManager em = emf.createEntityManager();
         
-       // List<Persona> personas = em.createNamedQuery("Persona.findAll").getResultList();
+        List<Persona> personas = em.createNamedQuery("Persona.findAll").getResultList();
         
         //cerramos la conexion
         em.close();
         
-      /*  //Imprimir los objetos de tipo persona
+        //Imprimir los objetos de tipo persona
         for(Persona persona : personas){
             log.debug("Persona:" + persona);
             //recuperamos los usuarios de cada persona
@@ -32,8 +26,5 @@ public class ClienteAsociacionesJPA {
                 log.debug("Usuario:" + usuario);
             }
         }
-    }*/
-}
-    
-
+    }
 }

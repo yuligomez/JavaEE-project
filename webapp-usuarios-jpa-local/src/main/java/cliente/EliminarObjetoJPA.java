@@ -21,7 +21,7 @@ import org.apache.logging.log4j.LogManager;
 public class EliminarObjetoJPA {
    
     public static void main(String[] args) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("UsuarioPu");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("SgaPU");
         EntityManager em = emf.createEntityManager();
 
         //Inicia la transaccion
@@ -30,7 +30,7 @@ public class EliminarObjetoJPA {
         tx.begin();
         
         //Paso 2. Ejecuta SQL de tipo select
-        Usuario usuario = em.find(Usuario.class, 4);
+        Usuario usuario = em.find(Usuario.class, 5);
         
         //Paso 3. termina transaccion 1
         tx.commit();

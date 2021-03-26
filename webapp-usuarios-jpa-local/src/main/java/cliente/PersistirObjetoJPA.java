@@ -8,7 +8,7 @@ public class PersistirObjetoJPA {
     
     
     public static void main(String[] args) {
-        EntityManagerFactory emf = Persistence.createEntityManagerFactory("UsuarioPu");
+        EntityManagerFactory emf = Persistence.createEntityManagerFactory("SgaPU");
         EntityManager em = emf.createEntityManager();
         EntityTransaction tx = em.getTransaction();
         
@@ -16,7 +16,7 @@ public class PersistirObjetoJPA {
         
         //Paso 1. Crea nuevo objeto
         //Objeto en estado transitivo
-        Usuario usuario = new Usuario("LOLAPALOZA", "Luna");
+        Usuario usuario = new Usuario("Pedro", "Luna");
         
         //Paso 2. Inicia transaccion
         tx.begin();

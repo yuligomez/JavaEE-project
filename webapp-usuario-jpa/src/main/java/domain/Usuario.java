@@ -23,15 +23,9 @@ public class Usuario implements Serializable {
     
     private String password;
     
-    @ManyToOne (cascade = CascadeType.ALL)
+    @ManyToOne
     @JoinColumn(name = "id_persona")
     private Persona persona;
-
-    public Usuario(String username, String pass, Persona persona) {
-        this.username =username;
-        this.password= pass;
-        this.persona= persona;
-    }
 
     public Persona getPersona() {
         return persona;

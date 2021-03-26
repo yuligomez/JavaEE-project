@@ -5,8 +5,6 @@ import javax.persistence.*;
 import javax.validation.constraints.Size;
 
 @Entity
-@NamedQueries({
-    @NamedQuery(name = "Usuario.findAll", query = "SELECT u FROM Usuario u")})
 @Table(name = "usuario")
 public class Usuario implements Serializable {
 
@@ -23,23 +21,6 @@ public class Usuario implements Serializable {
     
     private String password;
     
-    @ManyToOne (cascade = CascadeType.ALL)
-    @JoinColumn(name = "id_persona")
-    private Persona persona;
-
-    public Usuario(String username, String pass, Persona persona) {
-        this.username =username;
-        this.password= pass;
-        this.persona= persona;
-    }
-
-    public Persona getPersona() {
-        return persona;
-    }
-
-    public void setPersona(Persona persona) {
-        this.persona = persona;
-    }
  
     public Usuario() {
     }
