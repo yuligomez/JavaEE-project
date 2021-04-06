@@ -16,7 +16,9 @@ import javax.xml.bind.annotation.*;
     @NamedQuery(name = "Persona.findByTelefono", query = "SELECT p FROM Persona p WHERE p.telefono = :telefono")})
 
 @XmlAccessorType(XmlAccessType.FIELD) // para que Persona se convierta en xml cuando se envie via webservice
-//convierte cada uno de los atributos de persona en un elemento xml 
+//convierte cada uno de los atributos de persona en un elemento xml
+
+@XmlRootElement   //sin esto la respuesta por defalut va a ser de tipo JSON
 public class Persona implements Serializable {
 
     private static final long serialVersionUID = 1L;
