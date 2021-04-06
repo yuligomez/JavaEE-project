@@ -16,7 +16,7 @@
         <jakartaee>8.0</jakartaee>
     </properties>
     
-    <dependencies>
+       <dependencies>
         <dependency>
             <groupId>javax</groupId>
             <artifactId>javaee-api</artifactId>
@@ -53,20 +53,16 @@
             <artifactId>primefaces</artifactId>
             <version>7.0</version>
         </dependency>
-        
-         <dependency> <!--dependencia para usar webservices jws-->
+         <dependency>
             <groupId>javax.jws</groupId>
             <artifactId>javax.jws-api</artifactId>
             <version>1.1</version>
         </dependency>
-        
-          <dependency>
+        <dependency>
             <groupId>org.glassfish.jersey.core</groupId>
             <artifactId>jersey-client</artifactId>
             <version>2.29</version>
         </dependency>
-        
-        
     </dependencies>
     
      <build>
