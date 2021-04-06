@@ -15,6 +15,8 @@ import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.Status;
 import mx.com.gm.sga.domain.Persona;
 
+//http://localhost:8080/sga-jee-web/webservice/application.wadl
+
 @Path("/personas")
 @Stateless
 public class PersonaServicesRS {

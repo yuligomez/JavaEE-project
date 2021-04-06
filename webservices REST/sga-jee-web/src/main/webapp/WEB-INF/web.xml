@@ -24,7 +24,7 @@
     </servlet>
     <servlet-mapping>
         <servlet-name>JerseyWebApplication</servlet-name>
-        <url-pattern>/webservice/*</url-pattern> 
+        <url-pattern>/webservice/*</url-pattern>  
     </servlet-mapping>
     
     
