@@ -9,9 +9,10 @@ import javax.xml.bind.annotation.XmlRootElement;
 
 @XmlRootElement
 public class Persona {
-    
+
     private int idPersona;
-    private String nomnbre;
+    private String nombre;
+    private String apellido;
     private String email;
     private String teleofono;
 
@@ -19,16 +20,9 @@ public class Persona {
         this.idPersona = idPersona;
     }
 
-    @Override
-    public String toString() {
-        return "Persona{" + "idPersona=" + idPersona + ", nomnbre=" + nomnbre + ", email=" + email + ", teleofono=" + teleofono + '}';
-    }
-
-    
     public Persona() {
     }
-       
-       
+
     public int getIdPersona() {
         return idPersona;
     }
@@ -37,17 +31,21 @@ public class Persona {
         this.idPersona = idPersona;
     }
 
-
-
-    public String getNomnbre() {
-        return nomnbre;
+    public String getNombre() {
+        return nombre;
     }
 
-    public void setNomnbre(String nomnbre) {
-        this.nomnbre = nomnbre;
+    public void setNombre(String nomnbre) {
+        this.nombre = nomnbre;
     }
 
- 
+    public String getApellido() {
+        return apellido;
+    }
+
+    public void setApellido(String apellido) {
+        this.apellido = apellido;
+    }
 
     public String getEmail() {
         return email;
@@ -64,6 +62,11 @@ public class Persona {
     public void setTeleofono(String teleofono) {
         this.teleofono = teleofono;
     }
-    
-    
+
+    @Override
+    public String toString() {
+        return "Persona{" + "idPersona=" + idPersona + ", nombre=" + nombre + ", apellido=" + apellido + ", email=" + email + ", teleofono=" + teleofono + '}';
+    }
+
+
 }
