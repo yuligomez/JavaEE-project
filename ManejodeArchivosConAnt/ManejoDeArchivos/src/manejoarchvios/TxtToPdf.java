@@ -21,7 +21,7 @@ public class TxtToPdf {
     
     public static void main(String[] args) throws FileNotFoundException, DocumentException
 	{
-	    String linea, FileName, FileNameWithOutPath;
+	    String linea, FileName, FileNameWithOutPath, FileNameWithPath;
 	    File InFile = null;
 	    FileReader fr = null;
 	    BufferedReader br = null;
@@ -29,20 +29,17 @@ public class TxtToPdf {
             
 	    //Selecciona el archivo a convertir.
 	    //FileName = SeleccionarArchivoTxt();
-            FileNameWithOutPath = "prueba";
-            FileName = "prueba.txt";
+            FileNameWithOutPath = "Prueba";
+            FileName = "Prueba.txt";
+            FileNameWithPath = "C:\\Users\\yulia\\OneDrive\\Escritorio\\" + FileNameWithOutPath;
             
 	    // Abre el archivo y crea el reader.
-	    InFile = new File (FileName);
+	    InFile = new File (FileNameWithPath);
 	    fr = new FileReader (InFile);
             br = new BufferedReader(fr);
             
             
             //Crea el documento de salida.
-	   // FileOutputStream archivo = new FileOutputStream("C:\\" + InFile.getName() + ".pdf");
-            //FileOutputStream archivo = new FileOutputStream( InFile.getName() + ".pdf");
-          //  FileOutputStream archivo = new FileOutputStream( FileNameWithOutPath + ".pdf");    // funciona
-          
             FileOutputStream archivo = new FileOutputStream( "C:\\Users\\yulia\\OneDrive\\Escritorio\\" + FileNameWithOutPath + ".pdf");  
 	    Document documento = new Document();
 	    PdfWriter.getInstance(documento, archivo);
