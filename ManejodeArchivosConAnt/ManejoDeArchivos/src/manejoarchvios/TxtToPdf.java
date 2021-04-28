@@ -41,7 +41,9 @@ public class TxtToPdf {
             //Crea el documento de salida.
 	   // FileOutputStream archivo = new FileOutputStream("C:\\" + InFile.getName() + ".pdf");
             //FileOutputStream archivo = new FileOutputStream( InFile.getName() + ".pdf");
-            FileOutputStream archivo = new FileOutputStream( FileNameWithOutPath + ".pdf");
+          //  FileOutputStream archivo = new FileOutputStream( FileNameWithOutPath + ".pdf");    // funciona
+          
+            FileOutputStream archivo = new FileOutputStream( "C:\\Users\\yulia\\OneDrive\\Escritorio\\" + FileNameWithOutPath + ".pdf");  
 	    Document documento = new Document();
 	    PdfWriter.getInstance(documento, archivo);
 	    documento.open();
